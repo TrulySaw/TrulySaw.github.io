@@ -114,7 +114,7 @@ nav a:hover::before {
     to { transform: rotate(360deg); }
 }
 
-/* Hero section */
+/* Hero */
 .hero {
     height: calc(100vh - 103px);
     justify-content: center;
@@ -186,7 +186,7 @@ nav a:hover::before {
     50% { transform: translateY(-20px) rotate(180deg); }
 }
 
-/* Sections avec backgrounds différents */
+/* Sections avec backgrounds */
 .section-wrapper {
     position: relative;
     padding: 6rem 0;
@@ -225,7 +225,7 @@ nav a:hover::before {
     overflow: hidden;
 }
 
-/* Animation des étoiles */
+/* Animation étoiles */
 .stars {
     position: absolute;
     top: 0;
@@ -273,7 +273,7 @@ nav a:hover::before {
     }
 }
 
-/* Particules de vent/poussière */
+/* Particules vent/poussière */
 .wind-particles {
     position: absolute;
     width: 100%;
@@ -356,7 +356,7 @@ nav a:hover::before {
     75% { transform: translateY(-25px) translateX(5px); opacity: 0.9; }
 }
 
-/* Titre de section avec ornements Elden Ring */
+/* Titre de section Elden Ring */
 .section-title {
     font-family: 'Cinzel', serif;
     font-size: 3rem;
@@ -474,7 +474,7 @@ section {
     margin-top: 0.5rem;
 }
 
-/* Timeline des projets */
+/* Projets */
 .timeline {
     position: relative;
     max-width: 1150px;
@@ -767,7 +767,7 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Animations fade-in */
+/* Animations */
 .fade-in {
     opacity: 0;
     transform: translateY(50px);

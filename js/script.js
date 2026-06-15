@@ -1,4 +1,4 @@
-// Smooth scrolling pour la navigation
+// Smooth scrolling pour navigation
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -14,7 +14,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Animations au scroll
+// Animations scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -71,7 +71,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Génération des étoiles
+// Étoiles
 function createStars() {
     const aboutSection = document.getElementById('about');
     const starsContainer = document.createElement('div');
