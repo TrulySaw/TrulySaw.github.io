@@ -221,6 +221,12 @@
                 linear-gradient(225deg, #0a0a0a 0%, #1a0a1a 50%, #0a0a0a 100%);
         }
 
+        #certifications-section {
+            background: 
+                radial-gradient(ellipse at top, rgba(212, 175, 55, 0.14) 0%, transparent 72%),
+                linear-gradient(180deg, #0a0a0a 0%, #151515 45%, #0a0a0a 100%);
+        }
+
         #about {
             padding: 6rem 0;
             background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
@@ -649,6 +655,101 @@
             margin-bottom: 1rem;
         }
 
+        /* Section Certifications */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .certification-card {
+            background: rgba(26, 26, 26, 0.85);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.35s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .certification-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(212, 175, 55, 0.1) 50%, transparent 100%);
+            transform: translateX(-120%);
+            transition: transform 0.6s ease;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 24px 45px rgba(212, 175, 55, 0.22);
+        }
+
+        .certification-card:hover::before {
+            transform: translateX(120%);
+        }
+
+        .certification-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .certification-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--primary-gold);
+            font-size: 1.4rem;
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            flex-shrink: 0;
+        }
+
+        .certification-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.35rem;
+            color: var(--primary-gold);
+            margin-bottom: 0.25rem;
+        }
+
+        .certification-meta {
+            color: var(--text-dim);
+            font-size: 1rem;
+        }
+
+        .certification-text {
+            color: var(--text-light);
+        }
+
+        .certification-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-top: auto;
+            padding: 0.9rem 1.1rem;
+            border-radius: 999px;
+            text-decoration: none;
+            color: var(--dark-bg);
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-gold), var(--light-gold));
+            transition: all 0.3s ease;
+        }
+
+        .certification-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(212, 175, 55, 0.3);
+        }
+
         /* Footer */
         footer {
             background: var(--medium-bg);
@@ -736,6 +837,10 @@
             .objectifs-grid {
                 grid-template-columns: 1fr;
             }
+
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -746,9 +851,10 @@
             <div class="logo">The Portfolio</div>
             <nav>
                 <ul>
-                    <li><a href="#parcours">Parcours</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#objectifs">Objectifs</a></li>
+                    <li><a class="nav-link" href="#parcours">Parcours</a></li>
+                    <li><a class="nav-link" href="#projets">Projets</a></li>
+                    <li><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li><a class="nav-link" href="#objectifs">Objectifs</a></li>
                 </ul>
             </nav>
         </div>
@@ -956,6 +1062,74 @@
         </section>
     </div>
 
+    <!-- Certifications -->
+    <div id="certifications-section" class="section-wrapper">
+        <div class="particles"></div>
+        <section id="certifications" class="fade-in">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <article class="certification-card">
+                    <div class="certification-header">
+                        <div class="certification-icon"><i class="fas fa-certificate"></i></div>
+                        <div>
+                            <h3 class="certification-title">CCNA1 - Présentation des réseaux</h3>
+                            <p class="certification-meta">Cisco Netacad</p>
+                        </div>
+                    </div>
+                    <p class="certification-text">Certification CCNA1 obtenue sur la présentation des réseaux.</p>
+                    <a class="certification-link" href="file:///C:/Users/Moi/Documents/2e_annee/Portfolio/CCNA1.jpg" target="_blank" rel="noopener noreferrer">Voir le certificat <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </article>
+
+                <article class="certification-card">
+                    <div class="certification-header">
+                        <div class="certification-icon"><i class="fas fa-network-wired"></i></div>
+                        <div>
+                            <h3 class="certification-title">CCNA 2 - Commutation, routage et bases du sans fil</h3>
+                            <p class="certification-meta">Cisco Netacad</p>
+                        </div>
+                    </div>
+                    <p class="certification-text">Certification CCNA 2 obtenue sur les bases de la commutation, routage Cisco et du sans fil.</p>
+                    <a class="certification-link" href="file:///C:/Users/Moi/Documents/2e_annee/Portfolio/CCNA2.jpg" target="_blank" rel="noopener noreferrer">Voir le certificat <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </article>
+
+                <article class="certification-card">
+                    <div class="certification-header">
+                        <div class="certification-icon"><i class="fas fa-shield"></i></div>
+                        <div>
+                            <h3 class="certification-title">CSNA - Administration réseau Stormshield</h3>
+                            <p class="certification-meta">Stormshield</p>
+                        </div>
+                    </div>
+                    <p class="certification-text">Certification Stormshield CSNA passée et obtenue au sein de l'IUT R&T.</p>
+                    <a class="certification-link" href="file:///C:/Users/Moi/Documents/2e_annee/Portfolio/stormshield.jpg" target="_blank" rel="noopener noreferrer">Voir le certificat <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </article>
+
+                <article class="certification-card">
+                    <div class="certification-header">
+                        <div class="certification-icon"><i class="fas fa-users"></i></div>
+                        <div>
+                            <h3 class="certification-title">Certification SecNumEdu</h3>
+                            <p class="certification-meta">Secnumacademie</p>
+                        </div>
+                    </div>
+                    <p class="certification-text">Certification SecNumEdu obtenue.</p>
+                    <a class="certification-link" href="file:///C:/Users/Moi/Documents/2e_annee/Portfolio/SecNumEdu.jpg" target="_blank" rel="noopener noreferrer">Voir le certificat <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </article>
+
+                <article class="certification-card">
+                    <div class="certification-header">
+                        <div class="certification-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h3 class="certification-title">Mon CV</h3>
+                        </div>
+                    </div>
+                    <p class="certification-text">Pour plus d'informations sur mon parcours et mes compétences -> un bon CV.</p>
+                    <a class="certification-link" href="file:///C:/Users/Moi/Documents/2e_annee/Portfolio/CV_2026-06-15_Noah_DAVY.pdf" target="_blank" rel="noopener noreferrer">Voir le CV<i class="fas fa-arrow-up-right-from-square"></i></a>
+                </article>
+            </div>
+        </section>
+    </div>
+
     <!-- Objectifs -->
     <div id="objectifs-section" class="section-wrapper">
         <div class="particles"></div>
@@ -1053,17 +1227,16 @@
 
         // Particules dynamiques
         function createParticles() {
-            const particlesContainer = document.querySelector('.particles');
-            if (!particlesContainer) return;
-
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 4 + 's';
-                particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
-                particlesContainer.appendChild(particle);
-            }
+            document.querySelectorAll('.particles').forEach((particlesContainer) => {
+                for (let i = 0; i < 50; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 4 + 's';
+                    particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                    particlesContainer.appendChild(particle);
+                }
+            });
         }
 
         // Navigation active
